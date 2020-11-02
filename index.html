@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Book Exchange</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="This is a community for book lovers that connects people all around the world">
+<meta name="keywords" content="Book Club, Book Nerds, Book Community, Book Exchange Club, Book Exchange Club Online">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <!--online font bc icons not working when it was uploaded -->
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/modal_style.css">
+</head>
+<body>
+
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header trans_400">
+		<a class = "skip-main"href="#main" aria-label="skip to main content">Skip to Main Content</a>
+		<div class="header_content d-flex flex-row align-items-center jusity-content-start trans_400">
+
+			<!-- Logo -->
+			<div class="logo">
+				<a href="#">
+					<div>Book <span>Exchange Club</span></div>
+					<div></div>
+				</a>
+			</div>
+
+			<!-- Main Navigation -->
+			<nav class="main_nav" role= "navigation">
+				<ul class="d-flex flex-row align-items-center justify-content-start">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
+
+				<!-- Header Sign in -->
+				<button class="button button4" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign In</button>
+					<!-- MODAL -->
+					<div id="id01" class="modal">
+  						<!-- FORM -->
+  						<form class="modal-content animate" action="/action_page.php">
+    						<div class="imgcontainer">
+      							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+   						 	</div>
+   						 		<!-- Inputs -->
+    							<div class="modal_container">
+    								<h2> Members Portal</h2>
+      								<label id="uname"><b>Username</b></label>
+     		 							<input type="text" placeholder="Enter Username" name="uname" required>
+
+      								<label id="psw"><b>Password</b></label>
+      									<input type="password" placeholder="Enter Password" name="psw" required>
+      								<button class="sign_in" type="submit">Sign In</button>
+      								<label>
+        								<input type="checkbox" checked="checked" name="remember"> Remember me
+      								</label>
+    							</div>
+
+    							<div class="container" style="background-color:#f1f1f1">
+      								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      								<span class="psw">Forgot <a href="#">password?</a></span>
+    							</div>
+  						</form>
+					</div>
+
+				<!-- Header Social -->
+				<div class="social header_social">
+					<ul class="d-flex flex-row align-items-center justify-content-start">
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+
+				<!-- Hamburger -->
+				<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu_overlay trans_400"></div>
+	<div class="menu trans_400">
+		<div class="menu_close_container"><div class="menu_close"></div>
+		</div>
+		<nav class="menu_nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu_extra">
+			<div class="menu_link">+61 123 654 987</div>
+		</div>
+		<div class="social menu_social">
+			<ul class="d-flex flex-row align-items-center justify-content-start">
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(img/home_slider.jpg)"></div>
+				</div>
+
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(img/home_slider_2.jpg)"></div>
+				</div>	
+			</div>
+
+			<!-- Home Slider Dots -->
+
+			<div class="home_slider_dots">
+				<ul id="home_slider_custom_dots" class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-start">
+					<li class="home_slider_custom_dot trans_200 active"></li>
+					<li class="home_slider_custom_dot trans_200"></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Intro -->
+	<main id = "main">
+	<section>
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+
+				<!-- Intro Content -->
+				<div class="col-lg-6 intro_col">
+					<div class="intro_content">
+						<div class="section_title_container">
+							<div class="section_title"><h2>Welcome to Book Exchange Club</h2></div>
+						</div>
+						<div class="intro_text">
+							<p> This is a community where all book nerds/lovers are part of. It will lead you to the best selling book of the month or a year. You are going to meet new friends who love the same book as you.</p>
+						</div>
+						
+					</div>
+				</div>
+
+				<!-- Form -->
+				<div class="col-lg-6 intro_col">
+					<div class="intro_form_container">
+						<div class="intro_form_title">Join our Club!</div>
+						<form action="#" class="intro_form" id="intro_form">
+							<div class="">
+								<div class="name">
+									<label for="name">Name:</label><br class="clearfloat"/>
+										<input type="text" class="intro_input col-12" placeholder="Your Name" required="required"></div>
+								<div class="phone">
+									<label for="phone">Phone:</label><br class="clearfloat"/>
+										<input type="tel" class="intro_input col-12" placeholder="Your Phone" required="required"></div>
+								<div class="email">
+									<label for="email">Email:</label><br class="clearfloat"/>
+										<input type="email" class="intro_input col-12" placeholder="Your Email" required="required"></div>
+								
+							</div>
+							<button class="button button_1 intro_button trans_200">submit</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<!-- Why Choose Us -->
+	<section>
+	<div class="why">
+		<div class="container">
+			<div class="row row-eq-height">
+
+				<!-- Why Choose Us Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="why_image_container">
+						<div class="why_image"><img src="img/why_1.jpg" alt="New York's Time Best Selling Books Written by a Women"></div>
+					</div>
+				</div>
+
+				<!-- Why Choose Us Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="why_content">
+						<div class="section_title_container">
+							<div class="section_title"><h2>Why Join our Club?</h2></div>
+						</div>
+						<div class="why_text">
+							<p>This is a community where people who have the same hobbies are connected to each other. They share their experience and love for books. A community where we all discover new books with full of fantasy, Stories, knowledge, facts, and more.. Want to know more? Join our club NOW!!</p>
+						</div>
+						<div class="why_list">
+							<ul>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="why_list_content">
+										<div class="why_list_title">Best Book CLub</div>
+										<div class="why_list_text"><p>Considered by Time Magazine</p></div>
+									</div>
+								</li>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="why_list_content">
+										<div class="why_list_title">Book Fair Event</div>
+										<div class="why_list_text"><p>Fun Book Fair Event attended by authors</p></div>
+									</div>
+								</li>
+
+								<!-- Why List Item -->
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div class="why_list_content">
+										<div class="why_list_title">Great Experience for Book Nerds</div>
+										<div class="why_list_text"><p>You will be able meet new friend because of your same interest</p></div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- Best Sellers -->
+
+	<section>
+	<div class="best_sellers">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title_container">
+						<div class="section_title"><h2>BEST SELLERS</h2></div>
+					</div>
+				</div>
+			</div>
+			<div class="row book_row">
+				
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">Educated</div>
+							<img src="img/educated.jpg" alt="Educated. A best selling book written by Tara Westover">
+						</div>
+					</div>
+				</div>
+
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">An Anonymous Girl</div>
+							<img src="img/anonymous_girl.jpg" alt="Anonymous Girl. A best selling book written by Greer Hendricks and Sarah Pekkanen">
+						</div>
+					</div>
+				</div>
+
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">The Dreamers</div>
+							<img src="img/dreamers.jpg" alt="Dreamers. A best selling book written by Karen Thompson Walker">
+						</div>
+					</div>
+				</div>
+
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">The Reckoning</div>
+							<img src="img/reckoning.jpg" alt="The Reckoning. A best selling book written by John Grisham">
+						</div>
+					</div>
+				</div>
+
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">American Duchess</div>
+							<img src="img/duchess.jpg" alt="American Duchess. A best selling book written by Karen Harper">
+						</div>
+					</div>
+				</div>
+
+				<!-- book -->
+				<div class="col-xl-4 col-md-6 book_col">
+					<div class="books text-center">
+						<div class="books">
+							<div class="book_title">The Silent Patient</div>
+							<img src="img/silent_patient.jpg" alt="Silent Patient. A best selling book written by Alex Michaelides">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	</main>
+
+	<!-- Extra -->
+
+	<div class="extra">
+		<img src="img/extra.jpg" alt="extra">
+	</div>
+
+	
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Footer About -->
+					<div class="col-lg-3 footer_col"> 
+						<div class="footer_about">
+							<div class="footer_logo">
+								<a href="#">
+									<div>Book<span>Exchange</span></div>
+									<div>Club</div>
+								</a>
+							</div>
+							<div class="footer_about_text">
+								<p>A community where all book nerds/lovers are part of. It will lead you to the best selling book of the month or a year. You are going to meet new friends who love the same book as you. </p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer Contact Info -->
+					<div class="col-lg-3 footer_col"> 
+						<div class="footer_contact">
+							<div class="footer_title">Contact Info</div>
+							<ul class="contact_list">
+								<li>+61 123 654 987</li>
+								<li>bookexchange.mail@gmail.com</li>
+								<li>bookexchange.contact@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Footer Locations -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_location">
+							<div class="footer_title">Our Locations</div>
+							<ul class="locations_list">
+								<li>
+									<div class="location_title"><strong>Perth</strong></div>
+									<div class="location_text">45 Creekside Hillarys Cragie, WA 931</div>
+								</li>
+								<li>
+									<div class="location_title"><strong>Albany</strong></div>
+									<div class="location_text">1481 Creekside Lane Avila Beach, WA 931</div>
+								</li>
+							</ul>
+								<div><a class="twitter-share-button"
+  								href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>
+  								</div>
+  							 	<div class="fb-share-button" 
+    							data-href="https://www.your-domain.com/your-page.html" 
+    							data-layout="button_count">
+    							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bar">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
+								<nav class="footer_nav ml-md-auto">
+									<ul class="d-flex flex-row align-items-center justify-content-start">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="events.html">Events</a></li>
+										<li><a href="contact.html">Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script> <!-- Bootsrap code licensed -->
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script> <!-- Bootsrap code licensed -->
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+<script type="js/modal.js"></script>
+<script src="js/twitter.js"></script>
+<script src="js/facebook.js"></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
